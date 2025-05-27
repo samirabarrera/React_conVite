@@ -1,6 +1,6 @@
 import './App.css'
 import BrowserRouter, { Route, Routes } from 'react-router-dom';
-import DogBreedSearch from 'components/DogBreedSearch.jsx';
+import DogBreedSearch from './components/DogBreedSearch.jsx';
 
 function App() {
 
