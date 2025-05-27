@@ -1,18 +1,14 @@
 import './App.css'
-import BrowserRouter, { Route, Routes } from 'react-router-dom'
-import DogBreedSearch from './components/DogBreedSearch'
+import BrowserRouter, { Route, Routes } from 'react-router-dom';
+import DogBreedSearch from 'components/DogBreedSearch.jsx';
 
 function App() {
 
   return (
     <BrowserRouter>
-    <DogBreedSearch />
-
-    <Routes>
-      /*<Route path='/' element = {} / >*/
-    </Routes>
-
-    
+      <Routes>
+        <Route path="/" element={<DogBreedSearch />} />
+      </Routes>
     </BrowserRouter>
   )
 }

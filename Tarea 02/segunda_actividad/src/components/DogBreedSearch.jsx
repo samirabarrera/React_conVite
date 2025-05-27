@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function DogBreedSearch () {
     return (
         <div>
-            < Link style={} to = /> Inicio </Link>
+           
         </div>
     )
 };
