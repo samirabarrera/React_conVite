@@ -1,8 +1,8 @@
 import './App.css'
-import { DataProvider } from 'context/DataContext'
+import { DataProvider } from './context/DataContext'
 import Factor from './components/Factor';
 import Products from './components/Products';
-import ModalProduct from '.components/ModalProduct';
+import ModalProduct from './components/ModalProduct';
 
 function App() {
 
