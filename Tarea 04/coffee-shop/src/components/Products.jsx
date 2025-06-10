@@ -1,44 +1,39 @@
-import { useState, useEffect, useContext } from "react"
 import useFetch from "../hooks/useFetch"
 
 export default function Products () {
-    const { data: posts, loading, error, mensaje } = useFetch("https://api.sampleapis.com/coffee/hot")
-    const [products, setProducts] = useState([])
-
-    useEffect(() => {
-        
-    })
+    const { data: posts, loading, error, setProducts } = useFetch("https://api.sampleapis.com/coffee/hot")
 
     if(loading) return <p>Cargando... </p>
     if(error) return <p> Error: {error} </p>
 
-    mensaje()
+    const agregarAlCarrito = (post) => {
+      // Revisar que los productos existan ya en products y si existe modificarlo sino agregarlo
+      setProducts()
+    }
 
     return (
         <div className="productos">
-            {products.map(product => (
-                <div key={product.id} className="producto">
-                    <h3>{product.title}</h3>
-                        <img src={product.image} alt={product.title} width="150" />
-                        <p>{product.description}</p>
-                        <p><strong>Precio: Q{product.price}</strong></p>
+            {posts.map(post => (
+                <div key={post.id} className="producto">
+                    <h3>{post.title}</h3>
+                        <img src={post.image} alt={post.title} width="150" />
+                        <p>{post.description}</p>
+                        <p><strong>Precio: Q{post.price}</strong></p>
           <label>
             Cantidad:
             <input
               type="number"
               min="1"
-              value={product.cantidad}
+              value={post.cantidad}
               onChange={(e) => {
                 const nuevaCantidad = parseInt(e.target.value)
-                setProducts(prev =>
-                  prev.map(p =>
-                    p.id === product.id ? { ...p, cantidad: nuevaCantidad } : p
-                  )
-                )
+                setProducts()
+                // Modificar el estado de products la nueva cantidad a los productos
+                // guardados con la nueva cantidad
               }}
             />
           </label>
-          <button onClick={() => agregarAlCarrito(product)}>+</button>
+          <button onClick={() => agregarAlCarrito(post)}>+</button>
         </div>
       ))}
     </div>
