@@ -5,6 +5,8 @@ export default function useFetch(url) {
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
 
+    const [products, setProducts] = useState([])
+
     useEffect(() => {
         fetch(url)
             .then(res => {
@@ -13,6 +15,9 @@ export default function useFetch(url) {
             })
             .then(data => {
                 setData(data)
+                setLoading(false)
+                const priceAleatorio = Math.floor(Math.random() *(300 - 100 + 1)) + 100;
+                setData(data.map(d => ({... d, priceAleatorio, cantidad: 1})))
                 setLoading(false)
             })
             .catch(err => {
@@ -25,5 +30,5 @@ export default function useFetch(url) {
         console.log("Datos obtenidos desde useFetch.")
     }
 
-    return { data, loading, error, mensaje }
+    return { data, loading, error, mensaje, products, setProducts }
 }

@@ -9,6 +9,7 @@ import NotFound from './components/NotFound';
 function App() {
   return (
     <BrowserRouter>
+      <NavBar />
       <Routes>
         <Route path="/" element={< Products />} />
         <Route path="/finish-shop" element={<Cart />} />

@@ -1,0 +1,39 @@
+.NavBar {
+  background-color: #f4dada62; 
+  padding: 1rem 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.NavBar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.NavBar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333333;
+  letter-spacing: 0.5px;
+}
+
+.NavBar-right {
+  display: flex;
+  align-items: center;
+}
+
+.finalizar-compra {
+  background-color: #461d1d; 
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 10px;
+  margin-left: 950px;
+}
