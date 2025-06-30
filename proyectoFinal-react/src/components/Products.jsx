@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../config/firebase";
-import { Navigate, useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import "../styles/Products.css";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
@@ -29,7 +30,6 @@ export default function Products() {
     localStorage.removeITem("userEmail")
     navigate("/")
   }
-
 
   return (
     <>
