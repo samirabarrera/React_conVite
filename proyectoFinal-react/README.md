@@ -1,12 +1,8 @@
-# React + Vite
+Base de datos en Firebase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Imagen de los usuarios:
+![image](https://github.com/user-attachments/assets/06aa0984-dafd-4193-b129-469850aed03f)
 
-Currently, two official plugins are available:
+Imagen de los productos agregados:
+![image](https://github.com/user-attachments/assets/0d52cac8-43f7-4eff-99b5-3d8f602475f8)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
