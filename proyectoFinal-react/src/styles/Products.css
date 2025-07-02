@@ -1,6 +1,6 @@
 .products-container {
   padding: 20px;
-  background-color: #fff0f6;
+  background-color: #801665;
   min-height: 100vh;
 }
 
@@ -13,8 +13,8 @@
 
 .products-header button,
 .products-header a {
-  background-color: #ec407a;
-  color: white;
+  background-color: rgb(202, 62, 153);
+  color: rgb(183, 55, 151);
   border: none;
   padding: 8px 14px;
   border-radius: 6px;
@@ -23,6 +23,7 @@
   cursor: pointer;
   transition: background-color 0.3s;
   margin-right: 10px;
+  color: #fff0f6
 }
 
 .products-header button:hover,
@@ -37,7 +38,7 @@
 }
 
 .product-card {
-  background-color: white;
+  background-color: rgb(202, 62, 153);
   border: 1px solid #f48fb1;
   border-radius: 10px;
   padding: 15px;

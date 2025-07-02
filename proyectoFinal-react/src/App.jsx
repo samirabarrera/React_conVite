@@ -4,20 +4,25 @@ import Products from "./components/Products";
 import Login from "./components/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AddProduct from "./components/AddProduct";
+import Navbar from "./components/Navbar";
+import { StoreContextProvider } from "./context/StoreContext";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path= "/" element={<Login />} />
+    <StoreContextProvider>
+      <BrowserRouter>
+        <Navbar />
 
-        <Route element={<ProtectedRoute />} >
-        <Route path= "/products" element={<Products />} />
-        <Route path= "/add-product" element={< AddProduct />} />
-        </Route>
+        <Routes>
+          <Route path="/" element={<Login />} />
 
-      </Routes>
-    </BrowserRouter>
+          <Route element={<ProtectedRoute />}>
+            <Route path="/products" element={<Products />} />
+            <Route path="/add-product" element={<AddProduct />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </StoreContextProvider>
   );
 }
 export default App;

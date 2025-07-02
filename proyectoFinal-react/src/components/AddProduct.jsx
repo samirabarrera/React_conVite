@@ -1,6 +1,7 @@
 import { addDoc, collection } from "firebase/firestore";
 import { useState } from "react";
 import { db } from "../config/firebase";
+import "../styles/AddProduct.css"
 
 export default function AddProduct() {
   const [productName, setProductName] = useState("");
@@ -21,23 +22,25 @@ export default function AddProduct() {
     }
   };
   return (
-    <>
-      <form onSubmit={(e) => handleProduct(e)}>
-        <label>Nombre: </label>
+    <div className="add-product-container">
+      <form className="add-product-form" onSubmit={(e) => handleProduct(e)}>
+        <label className="form-label">Nombre: </label>
         <input
           type="text"
           value={productName}
           onChange={(e) => setProductName(e.target.value)}
+          className="form-input"
         />
 
-        <label>Image: </label>
+        <label className="form-label">Image: </label>
         <input
           type="text"
           value={productImage}
           onChange={(e) => setProductImage(e.target.value)}
+          className="form-input"
         />
-        <button type="submit">Guardar producto</button>
+        <button type="submit" className="form-button">Guardar producto</button>
       </form>
-    </>
+    </div>
   );
 }

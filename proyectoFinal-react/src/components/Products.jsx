@@ -5,6 +5,7 @@ import { useNavigate, Link } from "react-router-dom";
 import "../styles/Products.css";
 
 export default function Products() {
+
   const [products, setProducts] = useState([]);
   const navigate = useNavigate()
 
@@ -31,21 +32,23 @@ export default function Products() {
     navigate("/")
   }
 
-  return (
-    <>
-    <button onClick={signout}>Salir</button>
-    <Link to="/add-product">Agregar producto</ Link>
+ return (
+    <div className="products-container">
+      <div className="products-header">
+        <button onClick={signout}>Salir</button>
+        <Link to="/add-product">Agregar producto</Link>
+      </div>
+
       <h2>Products</h2>
-      <div>
+
+      <div className="product-list">
         {products.map((product) => (
-          <div>
+          <div className="product-card" key={product.id}>
+            <img src={product.img} alt={product.name} />
             <div>{product.name}</div>
-            <div>
-              <img style={width } src={product.image} />
-            </div>
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }

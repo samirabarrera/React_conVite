@@ -1,36 +1,42 @@
-nav {
-  background-color: #f8bbd0; /* rosa suave */
-  padding: 12px 24px;
+.navbar {
+  background-color: #ec407a;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 3px solid #ec407a; /* rosa fuerte */
+  padding: 16px 32px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-nav a {
-  color: #880e4f; /* rosa oscuro */
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-link {
+  color: white;
   text-decoration: none;
-  margin-right: 20px;
   font-weight: 600;
   font-size: 16px;
   transition: color 0.3s;
 }
 
-nav a:hover {
-  color: #d81b60; /* rosa medio al hacer hover */
+.navbar-link:hover {
+  color: #ffe4ec;
 }
 
-nav button {
-  background-color: #ec407a; /* rosa fuerte */
-  color: white;
+.navbar-button {
+  background-color: white;
+  color: #ec407a;
   border: none;
-  padding: 8px 16px;
+  padding: 10px 16px;
   border-radius: 6px;
-  cursor: pointer;
   font-weight: 600;
-  transition: background-color 0.3s;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-nav button:hover {
-  background-color: #ad1457; /* rosa intenso */
+.navbar-button:hover {
+  background-color: #c2185b;
+  color: white;
 }
