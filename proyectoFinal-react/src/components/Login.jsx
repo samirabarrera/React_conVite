@@ -25,7 +25,7 @@ export default function Login() {
     const collectionRef = collection(db, "users");
     const q = query(collectionRef, where("email", "==", email));
     const querySnapshot = await getDocs(q);
-    return querySnapshot.docs.lenght;
+    return querySnapshot.docs.length;
   };
 
   const handleLogin = async () => {
